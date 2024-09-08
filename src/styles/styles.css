@@ -1,0 +1,270 @@
+/* src/styles/styles.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  padding: 20px; /* Add padding to create space inside the container */
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-bottom: 30px; /* Increase bottom margin for more space */
+}
+
+/* Search Bar */
+.search-bar {
+  margin: 20px 0; /* Add margin to move it away from surrounding elements */
+  padding: 10px; /* Add padding inside the search bar */
+  border-radius: 4px; /* Add rounded corners if desired */
+  border: 1px solid #ddd; /* Add border for better visibility */
+}
+
+/* Table Styles */
+.city-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0; /* Add margin to create space above and below the table */
+}
+
+.city-table th,
+.city-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.city-table th {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.city-table th:hover {
+  background-color: #45a049;
+}
+
+.city-table th::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+}
+
+.city-table th.asc::after {
+  border-bottom-color: white;
+}
+
+.city-table th.desc::after {
+  border-top-color: white;
+}
+
+.city-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.city-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Links */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Weather Details */
+.weather-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px; /* Add margin at the top of the weather details */
+}
+
+.current-weather,
+.forecast {
+  flex: 1 1 45%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Add margin around the containers */
+}
+
+/* Forecast Items */
+.forecast-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.forecast-item:last-child {
+  border-bottom: none;
+}
+
+/* Back Link */
+.back-link {
+  display: inline-block;
+  margin: 20px 0; /* Add margin to move it down from the top */
+  color: #007BFF;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .weather-details {
+      flex-direction: column;
+  }
+
+  .current-weather,
+  .forecast {
+      flex: 1 1 100%;
+  }
+}
+
+/* Sunny Weather Background */
+.weather-bg-sunny {
+  background: url('https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=1024x1024&w=is&k=20&c=P68MuQDaXK7NM55yd1ivyrW7NZ2CokCNSfDcXe8BdH0=') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed; /* Ensure background stays fixed while scrolling */
+  height: 100%; /* Ensure the height covers the content area */
+  width: 100%; /* Ensure the width covers the content area */
+}
+
+/* Rainy Weather Background */
+.weather-bg-rainy {
+  background: url('https://media.istockphoto.com/id/1257951336/photo/transparent-umbrella-under-rain-against-water-drops-splash-background-rainy-weather-concept.jpg?s=612x612&w=0&k=20&c=lNvbIw1wReb-owe7_rMgW8lZz1zElqs5BOY1AZhyRXs=') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed; /* Ensure background stays fixed while scrolling */
+  height: 100%; /* Ensure the height covers the content area */
+  width: 100%; /* Ensure the width covers the content area */
+}
+
+/* Cloudy Weather Background */
+.weather-bg-cloudy {
+  background: url('https://c4.wallpaperflare.com/wallpaper/146/810/339/purple-flowers-crocus-crocuses-crocus-crocuses-wallpaper-preview.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed; /* Ensure background stays fixed while scrolling */
+  height: 100%; /* Ensure the height covers the content area */
+  width: 100%; /* Ensure the width covers the content area */
+}
+.geolocation-weather {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add margin to separate from other content */
+}
+
+.geolocation-weather h2 {
+  margin-top: 0;
+}
+
+.geolocation-weather p {
+  margin: 5px 0;
+}
+
+.geolocation-weather ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.geolocation-weather li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.geolocation-weather li:last-child {
+  border-bottom: none;
+}
+/* Button Styles */
+button {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #45a049, #4CAF50);
+  transform: scale(1.05);
+}
+
+button:active {
+  background: linear-gradient(45deg, #3e8e41, #387d39);
+  transform: scale(0.98);
+}
+
+/* Weather Container Styling */
+.geolocation-weather {
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* History and Favorites List Styling */
+.geolocation-weather ul {
+  list-style: none;
+  padding: 0;
+}
+
+.geolocation-weather li {
+  /*background: linear-gradient(45deg, #f3f3f3, #e1e1e1);*/
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.geolocation-weather li:hover {
+  /*background: linear-gradient(45deg, #e1e1e1, #f3f3f3);*/
+}
+.current-weather {
+  background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.weather-history {
+  background: linear-gradient(135deg, #FFECD2 0%, #FCB69F 100%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.weather-favorites {
+  background: linear-gradient(135deg, #C3EFFF 0%, #FFE3A3 100%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
