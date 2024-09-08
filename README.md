@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+### Project Overview
+This web application is designed to display a table of cities using infinite scroll and allow users to search, filter, and sort through the data. By clicking on a city, users can access detailed weather information, including current weather and forecast data.
+The project uses React Js for the frontend, and APIs like OpenWeatherMap and OpenDataSoft for fetching weather and city data.
+### Features
+    ### Cities Table
+        1. Displays cities in a table format with columns like city name, country, timezone, etc.
+        2. Implements infinite scroll to load city data as users scroll.
+        3. Search-as-you-type functionality with autocomplete for city names.
+        4. sorting of table columns.
+        5. Clicking on the city name takes you to the weather page for that city.
+        6. Right-clicking the city name and opening in a new tab also opens the weather page.
+            Weather Page
+        7. Displays current weather information (temperature, humidity, wind speed, etc.) using the  OpenWeatherMap API.
+        8.  Displays a 5-day forecast with high/low temperatures, weather descriptions, and precipitation chances.
+        9.  Dynamic backgrounds based on the current weather.
+    ### Optional Features
+        1. Save favorite locations for quick access.
+        2. Geolocation-based weather data.
+        3. Track weather history for recently viewed locations.
+    ### State Management
+        The application utilizes React's state management to handle data, avoid re-fetching, and manage global state such as weather data and city information. The state is centrally managed and passed down through components as props.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    ### Responsive Design
+        The application is designed to be fully responsive, ensuring it works well on a variety of screen sizes, including desktops, tablets, and mobile devices.
+    ### Error Handling
+        The application implements error handling for failed API requests and invalid search queries. User-friendly error messages are displayed in case of:
 
-## Available Scripts
+        Invalid city names.
+        No network connection.
+        API request failures.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
+### Technologies Used
+    1. React: For building the UI.
+    2. OpenWeatherMap API: To fetch current and forecast weather data.
+    3. OpenDataSoft API: To fetch city data.
+    4. CSS : For styling and responsive design.
+    5. Axios or Fetch API: To make HTTP requests.
+    6. React Router: For navigation between the cities table and weather pages.
+    7. Netlify: For deployment.
+### Installation and Setup
+    Prerequisites
+        npm 
 ### Deployment
+The application is deployed using [Netlify]. You can visit the live application at: Your Deployed App Link
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To deploy your own version:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Push your code to GitHub.
+Connect your GitHub repository to a deployment service like Netlify 
+Follow the platform's instructions to deploy.
