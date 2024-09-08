@@ -31,8 +31,8 @@ The project uses React Js for the frontend, and APIs like OpenWeatherMap and Ope
     1. React: For building the UI.
     2. OpenWeatherMap API: To fetch current and forecast weather data.
     3. OpenDataSoft API: To fetch city data.
-    4. CSS : For styling and responsive design.
-    5. Axios or Fetch API: To make HTTP requests.
+    4. CSS Media Queries: For styling and responsive design.
+    5. Axios: To make HTTP requests.
     6. React Router: For navigation between the cities table and weather pages.
     7. Netlify: For deployment.
 ### Installation and Setup
