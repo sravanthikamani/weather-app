@@ -25,8 +25,6 @@ The project uses React Js for the frontend, and APIs like OpenWeatherMap and Ope
     ### Error Handling
         The application implements error handling for failed API requests and invalid search queries. User-friendly error messages are displayed in case of:
 
-        Invalid city names.
-        No network connection.
         API request failures.
 
 ### Technologies Used
@@ -41,10 +39,6 @@ The project uses React Js for the frontend, and APIs like OpenWeatherMap and Ope
     Prerequisites
         npm 
 ### Deployment
-The application is deployed using [Netlify]. You can visit the live application at: Your Deployed App Link
+The application is deployed using [Netlify]. You can visit the live application at: 
+https://weather-technology.netlify.app/
 
-To deploy your own version:
-
-Push your code to GitHub.
-Connect your GitHub repository to a deployment service like Netlify 
-Follow the platform's instructions to deploy.
