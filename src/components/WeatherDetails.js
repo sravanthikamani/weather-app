@@ -16,7 +16,7 @@ const WeatherDetails = () => {
         setCurrentWeather(weatherData);
 
         const forecastData = await fetchWeatherForecast(cityName);
-        setForecast(forecastData.list.slice(0, 5)); // Get first 5 forecasts
+        setForecast(forecastData.list.slice(0, 5));
       } catch (err) {
         setError('Failed to fetch weather data. Please try again later.');
       }
@@ -42,7 +42,7 @@ const WeatherDetails = () => {
     );
   }
 
-  // Determine the weather background class based on current weather
+
   let weatherClass = '';
   if (currentWeather.weather[0].main === 'Clear') {
     weatherClass = 'weather-bg-sunny';

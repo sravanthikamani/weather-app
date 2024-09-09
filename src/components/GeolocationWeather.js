@@ -1,4 +1,4 @@
-// src/components/GeolocationWeather.js
+
 import React, { useState, useEffect } from 'react';
 
 const GeolocationWeather = () => {
@@ -69,7 +69,7 @@ const GeolocationWeather = () => {
 
   // Function to add location to favorites
  const addToFavorites = () => {
-  console.log('Adding to favorites:', weather); // Debugging line
+  console.log('Adding to favorites:', weather); 
   if (weather) {
     let favorites = JSON.parse(localStorage.getItem('weatherFavorites')) || [];
     if (!favorites.find(fav => fav.name === weather.name && fav.sys && fav.sys.country === weather.sys.country)) {

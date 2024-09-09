@@ -1,4 +1,4 @@
-// src/components/CityTable.js
+
 import React, { useState, useEffect, useCallback } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchCities } from '../services/cityService';
@@ -17,7 +17,7 @@ const CityTable = () => {
   const loadCities = useCallback(async () => {
     try {
       const newCities = await fetchCities(query, start, 20);
-      console.log('Loaded cities:', newCities); // Debugging line
+      console.log('Loaded cities:', newCities); 
       setCities((prevCities) => [...prevCities, ...newCities]);
       setStart((prevStart) => prevStart + 20);
 
@@ -32,8 +32,8 @@ const CityTable = () => {
 
   useEffect(() => {
     loadCities();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  }, [query, loadCities]);
+  
 
   const handleSearch = (selectedOption) => {
     setQuery(selectedOption ? selectedOption.label : '');
